@@ -1,0 +1,118 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Amatic SC', cursive;
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/galaxy.jpg);
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: #efb106;
+}
+
+p {
+	margin: 1rem 0 0.5rem 0;
+}
+
+section {
+	flex-basis: 57%;
+	margin-right: 10%;
+}
+
+aside {
+	flex-basis: 33%;
+}
+
+fieldset {
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+}
+
+label {
+	display: block;
+	margin: 0.5rem 0;
+}
+
+textarea {
+	height: 10rem;
+	padding: 1rem;
+	width: 90%;
+	margin: 0;
+}
+
+select {
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+button {
+	font-size: 1rem;
+	margin: 0.5rem auto;
+	padding: 0.5rem 1rem;
+	color: darkgrey;
+	background-color: white;
+}
+
+button:hover {
+	background-color: darkgrey;
+	color: white;
+}
+
+input,
+tel,
+email,
+date,
+number,
+select,
+button,
+textarea {
+	border-radius: 3px;
+	border-style: none;
+}
+
+input:not([type="radio"]):not([type="checkbox"]) {
+	padding: 0.5rem;
+	width: 90%;
+}
+
+.button {
+	text-align: center;
+}
+
+.mapwrapper {
+	overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+	border-radius: 10px;
+	margin: 1rem auto;
+}
+
+.mapwrapper iframe{
+	left:0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}

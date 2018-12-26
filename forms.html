@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<section>
+			<h1>Alien Abduction Order Form</h1>
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+				<input type="hidden" name="send_to" value="ybok@ya.ru">
+				<fieldset>
+					<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+					<legend>Your contact information</legend>
+
+					<label for="name">Your name</label> <!-- for="" attribute must match the form id -->
+					<input type="text" id="name" name="name" placeholder="First and Last name">
+
+					<label for="phone">Phone number</label>
+					<input type="tel" id="phone" name="phone" placeholder="including area code">
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" placeholder="example@example.com">
+				</fieldset>
+				<fieldset>
+					<legend for="date">About your abduction </legend>
+					<label>Requested date</label>
+					<input type="date" id="date" name="date">
+
+					<label for="qty">How many people would you like abducted?</label>
+					<input type="number" id="qty" name="qty" min="1" max="10">
+
+					<p>What type of UFO do you prefer?</p>
+					<label><input checked type="radio" name="ufotype" value="classic">Classic oval UFO</label>
+					<!-- wrapping the text with the label tag allows for the whole text to be clickable to select the radio button. otherwise (if label tag is missing) you are only able to click on the radio button -->
+					<label><input type="radio" name="ufotype" value="starWars">Star Wars-style Imperial cruiser</label>
+					<label><input type="radio" name="ufotype" value="battlestar">Battlestar Galactica-style Viper</label>
+					<label><input type="radio" name="ufotype" value="borg">Borg-style cube</label>
+					<!-- "id" is for the <label> tag, the values of "id" and "for" of the lable tag must be the same -->
+					<!-- "name" is for backend processing -->
+					<!-- "value" is the one that varries -->
+					<label for="abdType">What type of abduction experience do you want?</label>
+					<select id="abdType" name="abdType">
+						<option selected>Select one of the options</option>
+						<option value="tour">Tour of the solar system</option>
+						<option value="dinner">Alien dinner and discussion</option>
+						<option value="dance">Alien dance lessons</option>
+						<option value="whale">Whale watching</option>
+					</select>
+					<label for="comments">Special requests:</label>
+					<textarea id="comments" name="comments" placeholder="We'll do our best to fulfil your request but no guarantees"></textarea>
+					<label>
+						<input type="checkbox" value="subscribe" name="subscribe" checked>Add me to your email list
+					</label>
+				</fieldset>
+				<div class="button"><button type="submit">Submit</button></div>
+			</form>
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+			<div class="mapwrapper">
+				<iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7755.515697256785!2d-93.27544645784859!3d44.977498979006256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a75fc44b3%3A0xab6d15df00205abb!2s60+South+6th+St%2C+Minneapolis%2C+MN+55402%2C+USA!5e0!3m2!1sen!2sth!4v1545802298728"
+				 width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</aside>
+	</div>
+	<!-- <script src="js/forms.js"></script> -->
+</body>
+
+</html>
